@@ -7,37 +7,12 @@
     android:orientation="vertical"
     tools:context=".activity.MainActivity">
 
-
-    <EditText
-        android:id="@+id/edtDupla"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Nome da dupla"
-        android:inputType="textPersonName" />
-
-    <EditText
-        android:id="@+id/edtPartidasGanhas"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Pontuação da partida"
-        android:inputType="textPersonName" />
-
-    <EditText
-        android:id="@+id/edtPontuacao"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Pontuação da dupla"
-        android:inputType="number" />
-
     <Button
-        android:id="@+id/btnSalvar"
+        android:id="@+id/btnNovo"
         android:layout_width="match_parent"
         android:onClick="salvar"
         android:layout_height="wrap_content"
-        android:text="Salvar" />
+        android:text="Nova Dupla" />
 
     <ListView
         android:id="@+id/listDuplas"

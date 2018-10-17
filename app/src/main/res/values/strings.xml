@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Gerenciador Truco</string>
+    <string-array name="opcoes">
+        <item>Atualizar</item>
+        <item>Excluir</item>
+    </string-array>
 </resources>

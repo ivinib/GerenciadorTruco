@@ -20,8 +20,26 @@ public class TrucoRepository {
         mTrucos = mTrucoDAO.loadTruco();
     }
 
-    public List<Truco> getAllTrucos(){ return mTrucos;}
-    public void insert(Truco truco){ new insertAsyncTask(mTrucoDAO).execute(truco);}
+    public List<Truco> getAllTrucos(){
+        mTrucos = mTrucoDAO.loadTruco();
+        return mTrucos;
+    }
+
+    public Truco loadTrucoByID(long ID){
+        return mTrucoDAO.loadTrucoByID(ID);
+    }
+
+    public void insert(Truco truco){
+        new insertAsyncTask(mTrucoDAO).execute(truco);
+    }
+
+    public void delete(long id){
+        mTrucoDAO.delete(id);
+    }
+    public void update(Truco truco){
+        mTrucoDAO.update(truco);
+    }
+
     private static class insertAsyncTask extends AsyncTask<Truco,Void,Void>{
         private  TrucoDAO mAsyncTaskDAO;
         insertAsyncTask(TrucoDAO dao){ mAsyncTaskDAO = dao;}
