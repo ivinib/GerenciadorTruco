@@ -17,7 +17,7 @@ public interface TrucoDAO {
     @Update
     void update(Truco truco);
 
-    @Query("SELECT * FROM truco_table WHERE truco_table.ID == id")
+    @Query("SELECT * FROM truco_table WHERE truco_table.ID == :id")
     Truco loadTrucoByID(Long id);
 
     @Query("DELETE FROM truco_table WHERE truco_table.ID == :id")
